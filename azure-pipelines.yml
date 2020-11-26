@@ -1,2 +1,10 @@
 variables:
   buildConfiguration: 'Release'
+
+stages:
+  - stage: 'Deploy'
+    dependsOn: Build
+  
+    pool:
+      vmImage: 'ubuntu-18.04'
+  
